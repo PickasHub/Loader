@@ -1,6 +1,6 @@
 local SupportedGames = {
     [17625359962] = "https://your-site.com/rivals.lua",
-    [76503495566299] = "https://raw.githubusercontent.com/PickasHub/Scripts/refs/heads/main/Steal-a-chicken",
+    [76503495566299] = "https://flowauth.net/v1/loaders/f4d724bc1730e21cf242efe7c2aaddb8.lua",
 }
 
 local GameId = game.GameId
