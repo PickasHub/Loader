@@ -1,31 +1,28 @@
 local SupportedGames = {
-    [17625359962] = "https://your-site.com/rivals.lua",
-    [76503495566299] = "https://flowauth.net/v1/loaders/f4d724bc1730e21cf242efe7c2aaddb8.lua",
+    [76503495566299] = "https://flowauth.net/v1/loaders/pickashub-steal-a-chicken.lua",
+    [17625359962] = "https://flowauth.net/v1/loaders/pickashub-rivalsV2.lua",
 }
 
-local GameId = game.GameId
-local ScriptURL = SupportedGames[GameId]
+local ScriptURL = SupportedGames[game.PlaceId]
 
 if not ScriptURL then
     warn("PICKA'S HUB: Game not supported")
     return
 end
 
-local Success, Result = pcall(function()
+local success, code = pcall(function()
     return game:HttpGet(ScriptURL)
 end)
 
-if not Success then
-    warn("PICKA'S HUB: Failed to download script")
-    warn(Result)
+if not success then
+    warn("PICKA'S HUB: Failed to load script")
     return
 end
 
-local ExecuteSuccess, ExecuteError = pcall(function()
-    loadstring(Result)()
+local executeSuccess, err = pcall(function()
+    loadstring(code)()
 end)
 
-if not ExecuteSuccess then
-    warn("PICKA'S HUB: Script execution failed")
-    warn(ExecuteError)
+if not executeSuccess then
+    warn("PICKA'S HUB: Script execution failed:", err)
 end
