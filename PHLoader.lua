@@ -1,6 +1,6 @@
 local SupportedGames = {
-    [76503495566299] = "https://flowauth.net/v1/loaders/Pickas-hub-steal-a-chicken.lua",
-    [17625359962] = "https://flowauth.net/v1/loaders/Pickas-Hub-RivalsV2.lua",
+    [76503495566299] = "https://raw.githubusercontent.com/PickasHub/LoaderV2/refs/heads/main/Steal-a-chickenV2",
+    [17625359962] = "https://raw.githubusercontent.com/PickasHub/LoaderV2/refs/heads/main/RivalsV00.00.03",
 }
 
 local ScriptURL = SupportedGames[game.PlaceId]
